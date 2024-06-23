@@ -1,0 +1,334 @@
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  color: #00d1ff;
+}
+
+a {
+  color: #00d1ff;
+  text-decoration: none;
+}
+
+.FWlogo {
+  display: inline-block;
+  width: 40px;
+  margin-right: 3px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00d1ff;
+  border-radius: 5px;
+  background-color: #00d1ff;
+  color: #111;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+/* Hero Section */
+.logo {
+  margin-left: 10px;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1920x1080/?futuristic,technology') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 60px; /* To avoid content being under the fixed nav */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+/* Download Section */
+.download-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.download-buttons .download-btn {
+  margin: 10px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+
+/* Gallery Section Styling */
+.gallery-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+
+.gallery-section h2 {
+  margin-bottom: 30px;
+  color: #00d1ff;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-item {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+
+/* About us section */
+
+.credits-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+}
+
+.credits-section h2 {
+  margin-bottom: 30px;
+  color: #00d1ff;
+}
+
+.team {
+  margin-bottom: 40px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.team h3 {
+  color: #00d1ff;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.member p {
+  margin: 0;
+  font-size: 1.1rem;
+  display: inline-flex;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+/* buy section */
+.premium-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.premium-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.premium-header h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #00d1ff;
+}
+.premium-header p {
+  font-size: 16px;
+  color: #d3d3d3;
+}
+.premium-benefits {
+  margin-bottom: 30px;
+}
+.premium-benefits ul {
+  list-style-type: none;
+  padding: 0;
+}
+.premium-benefits li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.premium-benefits li::before {
+  content: "✓";
+  color: #00d1ff;
+  margin-right: 10px;
+}
+.btn-premium {
+  transition: 0.3s;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  color: #000000;
+  background-color: #00d1ff;
+  border: solid;
+  border-color: #00d1ff;
+  border-width: 2px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-premium:hover {
+  background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .premium-section {
+      margin: 20px;
+      padding: 20px;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logos links */
+.IconLogo {
+  height: 30px;
+  margin-right: 40px;
+}
+
